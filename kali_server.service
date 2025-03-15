@@ -1,0 +1,13 @@
+[Unit]
+Description=Kali Server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/secureuser/kali_server.py
+Restart=always
+User=root
+WorkingDirectory=/home/secureuser
+
+[Install]
+WantedBy=multi-user.target
+

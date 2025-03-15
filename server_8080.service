@@ -1,0 +1,12 @@
+[Unit]
+Description=Server 8080 Service
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/home/secureuser/server_8080
+ExecStart=/home/secureuser/server_8080/env/bin/python3 /home/secureuser/server_8080/manage.py runserver 0.0.0.0:8080
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,4 @@
+docker build -t test-komiljon-3 .
+
+
+docker run --privileged --name test-komiljon   -v /sys/fs/cgroup:/sys/fs/cgroup   --tmpfs /run --tmpfs /run/lock --tmpfs /tmp   -d --cgroupns=host test-komiljon-3 /sbin/init

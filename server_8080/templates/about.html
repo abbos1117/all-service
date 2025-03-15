@@ -1,0 +1,27 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <style>
+        .employee {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employees</h1>
+    <ul>
+        {% for employee in employees %}
+            <li class="employee">
+                <span class="first_name"><strong>{{ employee.first_name }}</strong></span> -
+                <span class="email">{{ employee.email }}</span> -
+                <span class="color">{{ employee.color }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

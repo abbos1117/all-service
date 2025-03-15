@@ -1,0 +1,13 @@
+[Unit]
+Description=Server 2000
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/secureuser/server_2000.py --port 2000
+Restart=always
+User=root
+WorkingDirectory=/home/secureuser
+
+[Install]
+WantedBy=multi-user.target
+

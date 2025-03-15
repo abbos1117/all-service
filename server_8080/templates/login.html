@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HAADY security</title>
+    <style>
+                    body {
+                        background-color: black;
+                        color: white;
+                        font-family: Arial, sans-serif;
+                        text-align: center;
+                    }</style>
+</head>
+<body>
+<h2>HAADY security</h2>
+
+<form action="/login-1/" method="post">{% csrf_token %}
+  <label for="fname">Username:</label><br>
+  <input type="text" name="username" placeholder="Username Here"><br>
+  <label for="lname">Password:</label><br>
+  <input type="password" name="password" placeholder="Password Here"><br><br>
+  <input type="submit" value="login">
+</form>
+</body>
+</html>

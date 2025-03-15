@@ -1,0 +1,12 @@
+[Unit]
+Description=Server 2003
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/secureuser/server_2003.py --port 2003
+Restart=always
+User=root
+WorkingDirectory=/home/secureuser
+
+[Install]
+WantedBy=multi-user.target
